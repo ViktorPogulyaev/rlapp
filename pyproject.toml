@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "rl-webapp"
+version = "0.1.0"
+description = ""
+authors = ["vpogulyaev <vipogulyaev@ya.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.8"
+psycopg-binary = {version = "^3.2.4", extras = ["postgres"]}
+uvicorn = "^0.34.0"
+pydantic-settings = "^2.7.1"
+psycopg2 = "^2.9.10"
+gunicorn = "^23.0.0"
+alembic = "^1.14.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+
+
+[tool.poetry.group.develop.dependencies]
+ruff = "^0.9.6"
+isort = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
